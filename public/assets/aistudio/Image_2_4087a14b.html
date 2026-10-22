@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Alexsandro A. Arantes | Dev FullStack &amp; Cyber Security</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#ffdad6",
+            "secondary": "#4cd7f6",
+            "on-background": "#dfe2f1",
+            "surface-container-high": "#262a35",
+            "tertiary-fixed-dim": "#4edea3",
+            "on-secondary-fixed": "#001f26",
+            "border-subtle": "rgba(255, 255, 255, 0.08)",
+            "surface-bg": "#0B0F19",
+            "surface-container-lowest": "#0a0e18",
+            "primary-fixed-dim": "#c0c1ff",
+            "inverse-on-surface": "#2c303b",
+            "background": "#0f131d",
+            "tertiary-fixed": "#6ffbbe",
+            "error": "#ffb4ab",
+            "text-muted": "#4B5563",
+            "on-tertiary-container": "#000703",
+            "on-secondary": "#003640",
+            "secondary-fixed": "#acedff",
+            "on-primary-container": "#0d0096",
+            "surface-container-highest": "#313540",
+            "text-secondary": "#9CA3AF",
+            "surface-tint": "#c0c1ff",
+            "outline": "#908fa0",
+            "on-error": "#690005",
+            "inverse-primary": "#494bd6",
+            "on-primary-fixed-variant": "#2f2ebe",
+            "on-tertiary-fixed": "#002113",
+            "surface-dim": "#0f131d",
+            "secondary-container": "#03b5d3",
+            "surface": "#0f131d",
+            "whatsapp-green": "#22C55E",
+            "on-primary": "#1000a9",
+            "border-glass": "rgba(99, 102, 241, 0.2)",
+            "surface-container": "#1c1f2a",
+            "on-surface": "#dfe2f1",
+            "on-tertiary-fixed-variant": "#005236",
+            "surface-container-low": "#171b26",
+            "accent-yellow": "#F59E0B",
+            "on-surface-variant": "#c7c4d7",
+            "on-secondary-fixed-variant": "#004e5c",
+            "primary-container": "#8083ff",
+            "inverse-surface": "#dfe2f1",
+            "surface-glass": "rgba(17, 24, 39, 0.72)",
+            "outline-variant": "#464554",
+            "surface-bright": "#353944",
+            "on-primary-fixed": "#07006c",
+            "secondary-fixed-dim": "#4cd7f6",
+            "surface-elevated": "#111827",
+            "text-primary": "#F9FAFB",
+            "surface-variant": "#313540",
+            "on-secondary-container": "#00424e",
+            "primary-fixed": "#e1e0ff",
+            "accent-blue-team": "#3B82F6",
+            "tertiary-container": "#00885d",
+            "tertiary": "#4edea3",
+            "on-tertiary": "#003824",
+            "error-container": "#93000a",
+            "primary": "#c0c1ff",
+            "accent-red-team": "#EF4444"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "margin": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Hanken Grotesk"],
+            "headline-sm": ["Sora"],
+            "body-md": ["Hanken Grotesk"],
+            "label-md": ["Hanken Grotesk"],
+            "label-lg": ["Hanken Grotesk"],
+            "headline-md": ["Sora"],
+            "headline-xl": ["Sora"],
+            "label-sm": ["Hanken Grotesk"],
+            "body-sm": ["Hanken Grotesk"],
+            "headline-lg": ["Sora"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom glow and scroll hides */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .cyber-glow-indigo { box-shadow: 0 0 20px -3px rgba(99, 102, 241, 0.35); }
+    .cyber-glow-cyan { box-shadow: 0 0 20px -3px rgba(6, 182, 212, 0.35); }
+    .cyber-glow-green { box-shadow: 0 0 20px -3px rgba(34, 197, 94, 0.4); }
+  </style>
+</head>
+<body class="bg-surface-bg text-text-primary font-body-md text-body-md antialiased pb-24 selection:bg-primary selection:text-on-primary">
+<!-- React Native / Mobile Status Bar Mockup -->
+<div class="fixed top-0 left-0 w-full h-6 z-50 flex justify-between items-center px-5 bg-[#0B0F19]/90 backdrop-blur-md text-[11px] font-semibold text-text-secondary select-none">
+<span>09:41</span>
+<div class="flex items-center space-x-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[14px]">wifi</span>
+<span class="material-symbols-outlined text-[14px]">battery_full</span>
+</div>
+</div>
+<!-- TopAppBar Component (from Shared Components JSON) -->
+<header class="flex justify-between items-center w-full px-4 h-14 fixed top-6 left-0 z-50 bg-surface-glass border-b border-border-glass backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Profile photo of Alexsandro Arantes with security verified badge" class="w-9 h-9 rounded-full object-cover border border-secondary shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1UBanq6EtPcj6phKRM8jnuH23Oi5FNaWefEwwQ5DXKVsZKHoihxcvwkWNJ1TCy4V-En2vimr4pJM399p2lK7uruj3o493UYsFTNMLiIE3YykgZ6LehTX5T5BJYn1Wr176p8ChAQlMOcbfGunG_VTR3c6P_MD58p-04hZuVJmxPCW4yKO74k7bMcB0fkVsY_jFWFrnVbs2WoIIXnyOAA7cRuio_loBuV3YlI-pyMlzC95tde-1jIXPR2Jg"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary rounded-full border-2 border-surface-bg" title="Online &amp; Verified"></span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-semibold text-text-primary tracking-tight leading-tight">Alexsandro A. Arantes</h1>
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Disponível para Projetos</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="w-9 h-9 rounded-lg bg-surface-elevated flex items-center justify-center text-primary border border-border-glass active:scale-95 transition-all duration-150 hover:bg-surface-container-high" href="#contato" title="Segurança &amp; Contato">
+<span class="material-symbols-outlined text-[20px]" data-icon="security">security</span>
+</a>
+</div>
+</header>
+<!-- Main Content Viewport -->
+<main class="w-full max-w-md mx-auto pt-24 px-4 space-y-6">
+<!-- Segmented Navigation Pills -->
+<section class="overflow-x-auto no-scrollbar py-1">
+<div class="flex items-center gap-2 w-max">
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-text-primary cyber-glow-indigo font-label-md text-label-md transition-all">
+          Web Fullstack
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-elevated text-text-secondary border border-border-subtle font-label-md text-label-md active:scale-95 transition-all hover:text-text-primary">
+          Desktop &amp; Mobile
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-elevated text-text-secondary border border-border-subtle font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all hover:text-text-primary">
+<span class="w-2 h-2 rounded-full bg-accent-blue-team"></span>
+          Blue Team (Defesa)
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-elevated text-text-secondary border border-border-subtle font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all hover:text-text-primary">
+<span class="w-2 h-2 rounded-full bg-accent-red-team"></span>
+          Red Team (Pentest)
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-elevated text-text-secondary border border-border-subtle font-label-md text-label-md active:scale-95 transition-all hover:text-text-primary">
+          Tráfego Pago
+        </button>
+</div>
+</section>
+<!-- Hero Profile Bento Card -->
+<section class="relative overflow-hidden rounded-xl bg-surface-glass border border-border-glass p-5 backdrop-blur-md shadow-2xl">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-8 -bottom-8 w-28 h-28 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase font-semibold">FullStack &amp; Ethical Hacker</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-text-primary mt-1">Desenvolvedor<br/><span class="text-secondary">Web Fullstack</span></h2>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center border border-border-glass text-secondary">
+<span class="material-symbols-outlined text-[28px]" data-icon="terminal">terminal</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-3 leading-relaxed">
+        Desenvolvedor web fullstack é um profissional que trabalha tanto no front-end quanto no back-end de aplicações web. Cria interfaces de usuário, gerencia servidores e bancos de dados, e integra APIs. Possui habilidades em diversas linguagens de programação e frameworks.
+      </p>
+<!-- Tech Stack Matrix -->
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<p class="font-label-sm text-label-sm text-text-muted mb-2 tracking-wider uppercase">Stack &amp; Ambientes</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-primary text-[11px] font-mono border border-border-subtle">React Native</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-primary text-[11px] font-mono border border-border-subtle">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-primary text-[11px] font-mono border border-border-subtle">Python</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-primary text-[11px] font-mono border border-border-subtle">MongoDB</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-primary text-[11px] font-mono border border-border-subtle">Kali Linux</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-primary text-[11px] font-mono border border-border-subtle">Docker</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-primary text-[11px] font-mono border border-border-subtle">SEO Specialist</span>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<a class="flex-1 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center font-bold tracking-wide transition-all active:scale-95 shadow-md" href="#planos">
+          CONTRATAR PLANOS
+        </a>
+<a class="px-4 py-2.5 rounded-lg bg-surface-container-high text-secondary border border-secondary/30 font-label-md text-label-md text-center active:scale-95 transition-all" href="#servicos">
+          SAIBA MAIS
+        </a>
+</div>
+</section>
+<!-- Tactical Capabilities Grid (Services) -->
+<section class="space-y-3" id="servicos">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">Especialidades</h3>
+<span class="font-label-sm text-label-sm text-secondary">4 Áreas de Atuação</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Card 1 -->
+<div class="p-3.5 rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="devices">devices</span>
+</div>
+<h4 class="font-headline-sm text-[15px] font-semibold text-text-primary">Desktop &amp; Mobile</h4>
+<p class="font-body-sm text-[11px] text-text-secondary mt-1 line-clamp-3">
+              Criação de aplicativos para computadores e smartphones, otimizando interfaces touch e alto rendimento.
+            </p>
+</div>
+<a class="mt-3 text-[11px] font-semibold text-secondary flex items-center gap-1 hover:underline" href="#orcamento">
+            Saiba Mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="p-3.5 rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-lg bg-accent-blue-team/15 flex items-center justify-center text-accent-blue-team mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="shield">shield</span>
+</div>
+<h4 class="font-headline-sm text-[15px] font-semibold text-text-primary">Blue Team</h4>
+<p class="font-body-sm text-[11px] text-text-secondary mt-1 line-clamp-3">
+              Defesa cibernética proativa, monitoramento, mitigação de ameaças e análise forense digital de incidentes.
+            </p>
+</div>
+<a class="mt-3 text-[11px] font-semibold text-accent-blue-team flex items-center gap-1 hover:underline" href="#orcamento">
+            Saiba Mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="p-3.5 rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-lg bg-accent-red-team/15 flex items-center justify-center text-accent-red-team mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="bug_report">bug_report</span>
+</div>
+<h4 class="font-headline-sm text-[15px] font-semibold text-text-primary">Red Team Pentest</h4>
+<p class="font-body-sm text-[11px] text-text-secondary mt-1 line-clamp-3">
+              Simulação de ataques ofensivos para identificar e explorar brechas de segurança antes de invasores reais.
+            </p>
+</div>
+<a class="mt-3 text-[11px] font-semibold text-accent-red-team flex items-center gap-1 hover:underline" href="#orcamento">
+            Saiba Mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4 -->
+<div class="p-3.5 rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-lg bg-accent-yellow/15 flex items-center justify-center text-accent-yellow mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="ads_click">ads_click</span>
+</div>
+<h4 class="font-headline-sm text-[15px] font-semibold text-text-primary">Tráfego Pago</h4>
+<p class="font-body-sm text-[11px] text-text-secondary mt-1 line-clamp-3">
+              Google ADS, Meta ADS e YouTube ADS. Estratégias táticas para escalar leads e tráfego qualificado.
+            </p>
+</div>
+<a class="mt-3 text-[11px] font-semibold text-accent-yellow flex items-center gap-1 hover:underline" href="#orcamento">
+            Saiba Mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Pricing Section: Web & App Dev -->
+<section class="space-y-3 pt-2" id="planos">
+<div class="text-center space-y-1">
+<h3 class="font-headline-md text-headline-md font-bold text-text-primary">Valores de outros planeta</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Nossos preços cabem no seu orçamento, até os mais modestos.</p>
+</div>
+<!-- Plan Cards Stack -->
+<div class="space-y-4">
+<!-- Plano Light -->
+<div class="rounded-xl bg-surface-glass border border-border-glass p-4 backdrop-blur-md">
+<div class="flex justify-between items-start">
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-surface-container text-text-secondary border border-border-subtle uppercase">Econômico</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-text-primary mt-1">Plano Light</h4>
+<p class="font-body-sm text-[12px] text-text-secondary">Front-end Plano Economico e Responsivo.</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-secondary">R$ 1.200</span>
+<span class="block text-[10px] text-text-secondary font-mono">/Pg único</span>
+</div>
+</div>
+<ul class="mt-3.5 space-y-2 text-text-secondary font-body-sm text-[12px]">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Página Simples Personalizada</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Inclui SEO Google</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Tags de Ranqueamento</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Pré Suporte e Registro</span>
+</li>
+</ul>
+<a class="mt-4 block w-full py-2.5 rounded-lg bg-surface-container-high border border-secondary/40 text-secondary font-label-md text-label-md text-center active:scale-95 transition-all" href="https://wa.me/13982237027?text=Ol%C3%A1,%20gostaria%20de%20contratar%20o%20*Plano%20Light*%20de%20R$%201200." target="_blank">
+            Contratar
+          </a>
+</div>
+<!-- Plano Premium (Featured) -->
+<div class="relative rounded-xl bg-surface-glass border-2 border-primary/40 p-4 backdrop-blur-md cyber-glow-indigo">
+<div class="absolute -top-2.5 right-4 px-2.5 py-0.5 rounded-full bg-primary text-on-primary text-[10px] font-bold tracking-wider uppercase">
+            Mais Popular
+          </div>
+<div class="flex justify-between items-start">
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-primary/20 text-primary border border-primary/30 uppercase">Standard</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-text-primary mt-1">Plano Premium</h4>
+<p class="font-body-sm text-[12px] text-text-secondary">FrontEnd Modo Standart mais elaborado.</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-primary">R$ 2.200</span>
+<span class="block text-[10px] text-text-secondary font-mono">/Pg único</span>
+</div>
+</div>
+<ul class="mt-3.5 space-y-2 text-text-secondary font-body-sm text-[12px]">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Front-end Completo e Responsivo</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Desenvolvimento padrão SEO avançado</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Envio com formulário ao email</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Inclusão Google Analytics</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Pré Suporte e Registro</span>
+</li>
+</ul>
+<a class="mt-4 block w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md text-center font-bold tracking-wide active:scale-95 transition-all shadow-md" href="https://wa.me/13982237027?text=Ol%C3%A1,%20gostaria%20de%20contratar%20o%20*Plano%20Premium*%20de%20R$%202200." target="_blank">
+            Contratar
+          </a>
+</div>
+<!-- Plano Empresarial -->
+<div class="rounded-xl bg-surface-glass border border-border-glass p-4 backdrop-blur-md">
+<div class="flex justify-between items-start">
+<div>
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-tertiary/10 text-tertiary border border-tertiary/30 uppercase">FullStack Pro</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-text-primary mt-1">Plano Empresarial</h4>
+<p class="font-body-sm text-[12px] text-text-secondary">Plano FullStack o mais completo.</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-tertiary">R$ 4.400</span>
+<span class="block text-[10px] text-text-secondary font-mono">/Pg único</span>
+</div>
+</div>
+<ul class="mt-3.5 space-y-2 text-text-secondary font-body-sm text-[12px]">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Front-end e Back-end estruturados</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Login, Cadastro e Autenticação</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Integração de Banco de Dados</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Tags de Ranqueamento &amp; Google Analytics</span>
+</li>
+</ul>
+<a class="mt-4 block w-full py-2.5 rounded-lg bg-surface-container-high border border-border-subtle text-text-primary font-label-md text-label-md text-center active:scale-95 transition-all hover:border-tertiary" href="https://wa.me/13982237027?text=Ol%C3%A1,%20gostaria%20de%20contratar%20o%20*Plano%20Empresarial*%20de%20R$%204400." target="_blank">
+            Contratar
+          </a>
+</div>
+</div>
+</section>
+<!-- Traffic Management Plans Section -->
+<section class="space-y-3 pt-2">
+<div class="p-4 rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-[20px]" data-icon="insights">insights</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">Gestor de Tráfego Pago</h3>
+</div>
+<p class="font-body-sm text-[12px] text-text-secondary mb-3">
+          Impulsione seus lucros aumentando seus acessos com anúncios pagos.
+        </p>
+<div class="p-3 rounded-lg bg-surface-container border border-border-subtle">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-headline-sm text-[15px] font-bold text-text-primary">Plano Light Tráfego</span>
+<span class="font-headline-sm text-[16px] font-bold text-secondary">R$ 500,00</span>
+</div>
+<ul class="space-y-1.5 text-text-secondary text-[11px] font-body-sm mb-3">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[14px]">check</span> Campanhas no Google ADS</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[14px]">check</span> Campanhas no YouTube ADS</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[14px]">check</span> Campanhas no Meta ADS</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[14px]">check</span> Análise de Resultados das Campanhas</li>
+</ul>
+<a class="block w-full py-2 rounded bg-surface-container-high text-secondary border border-secondary/30 text-center font-label-md text-label-md active:scale-95" href="https://wa.me/13982237027?text=Ol%C3%A1,%20gostaria%20de%20contratar%20o%20*Plano%20Light*%20de%20Trafego%20Pago%20Serviço%20R$%20500,00">
+            Contratar Tráfego Light
+          </a>
+</div>
+</div>
+</section>
+<!-- Payment Modules (Pix, Bitcoin, ETH) -->
+<section class="space-y-3 pt-2" id="pagamento">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">Métodos de Pagamento</h3>
+<p class="font-body-sm text-[11px] text-text-secondary">Pix Instantâneo ou Criptoativos Descentralizados</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<!-- Segmented Payment Selector -->
+<div class="grid grid-cols-3 gap-1.5 bg-surface-elevated p-1 rounded-xl border border-border-subtle" id="payment-tabs">
+<button class="py-1.5 rounded-lg text-center font-label-md text-label-md bg-secondary text-on-secondary font-bold transition-all" id="tab-pix" onclick="switchPayment('pix')">
+          PIX
+        </button>
+<button class="py-1.5 rounded-lg text-center font-label-md text-label-md text-text-secondary hover:text-text-primary transition-all" id="tab-btc" onclick="switchPayment('btc')">
+          Bitcoin
+        </button>
+<button class="py-1.5 rounded-lg text-center font-label-md text-label-md text-text-secondary hover:text-text-primary transition-all" id="tab-eth" onclick="switchPayment('eth')">
+          Ethereum
+        </button>
+</div>
+<!-- Content Panels -->
+<div class="rounded-xl bg-surface-glass border border-border-glass p-5 backdrop-blur-md">
+<!-- PIX Panel -->
+<div class="space-y-4" id="panel-pix">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span> Pagar com Pix
+            </span>
+<span class="text-[10px] font-mono text-tertiary bg-tertiary/10 px-2 py-0.5 rounded">24/7 Sem Taxas</span>
+</div>
+<!-- Stylized QR Display Mockup -->
+<div class="w-48 h-48 mx-auto bg-surface-elevated border border-border-glass rounded-xl p-3 flex flex-col items-center justify-center relative overflow-hidden">
+<div class="grid grid-cols-5 gap-1.5 opacity-80">
+<div class="w-6 h-6 border-2 border-secondary rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/40 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-secondary rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/80 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-secondary rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/60 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-secondary rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/30 rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/90 rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/40 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-secondary rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/50 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-secondary rounded-sm"></div>
+<div class="w-6 h-6 bg-secondary/70 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-secondary rounded-sm"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-surface-elevated/40 backdrop-blur-[1px]">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-lg">
+<span class="material-symbols-outlined text-[22px]">qr_code_2</span>
+</div>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-text-secondary block mb-1">Chave Pix Copia e Cola:</label>
+<div class="flex items-center gap-1.5 bg-surface-container rounded-lg p-2 border border-border-subtle">
+<span class="font-mono text-[11px] text-text-primary truncate flex-1" id="pix-key">41e15c1e-e784-45f6-92f7-8b397686b5cd</span>
+<button class="p-1.5 rounded bg-surface-container-high text-secondary hover:text-text-primary active:scale-95" onclick="navigator.clipboard.writeText('41e15c1e-e784-45f6-92f7-8b397686b5cd'); alert('Chave Pix copiada!');" title="Copiar Chave">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bitcoin Panel -->
+<div class="space-y-4 hidden" id="panel-btc">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-accent-yellow flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">currency_bitcoin</span> Pagar com Bitcoin
+            </span>
+<span class="text-[10px] font-mono text-accent-yellow bg-accent-yellow/10 px-2 py-0.5 rounded">Rede Principal (BTC)</span>
+</div>
+<div class="w-48 h-48 mx-auto bg-surface-elevated border border-border-glass rounded-xl p-3 flex flex-col items-center justify-center relative overflow-hidden">
+<div class="grid grid-cols-5 gap-1.5 opacity-80">
+<div class="w-6 h-6 border-2 border-accent-yellow rounded-sm"></div>
+<div class="w-6 h-6 bg-accent-yellow/40 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-accent-yellow rounded-sm"></div>
+<div class="w-6 h-6 bg-accent-yellow/80 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-accent-yellow rounded-sm"></div>
+<div class="w-6 h-6 bg-accent-yellow/60 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-accent-yellow rounded-sm"></div>
+<div class="w-6 h-6 bg-accent-yellow/30 rounded-sm"></div>
+<div class="w-6 h-6 bg-accent-yellow/90 rounded-sm"></div>
+<div class="w-6 h-6 bg-accent-yellow/40 rounded-sm"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-surface-elevated/40 backdrop-blur-[1px]">
+<div class="w-10 h-10 rounded-full bg-accent-yellow flex items-center justify-center text-surface-bg shadow-lg">
+<span class="material-symbols-outlined text-[22px]">currency_bitcoin</span>
+</div>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-text-secondary block mb-1">Endereço da Carteira BTC:</label>
+<div class="flex items-center gap-1.5 bg-surface-container rounded-lg p-2 border border-border-subtle">
+<span class="font-mono text-[10px] text-text-primary truncate flex-1">bc1qqm8hllrvt3ve8n8nwtp6s8f85vnjazl33ze6vh</span>
+<button class="p-1.5 rounded bg-surface-container-high text-accent-yellow hover:text-text-primary active:scale-95" onclick="navigator.clipboard.writeText('bc1qqm8hllrvt3ve8n8nwtp6s8f85vnjazl33ze6vh'); alert('Endereço BTC copiado!');" title="Copiar Endereço">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ETH Panel -->
+<div class="space-y-4 hidden" id="panel-eth">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">toll</span> Pagar com ETH
+            </span>
+<span class="text-[10px] font-mono text-primary bg-primary/10 px-2 py-0.5 rounded">Ethereum ERC20</span>
+</div>
+<div class="w-48 h-48 mx-auto bg-surface-elevated border border-border-glass rounded-xl p-3 flex flex-col items-center justify-center relative overflow-hidden">
+<div class="grid grid-cols-5 gap-1.5 opacity-80">
+<div class="w-6 h-6 border-2 border-primary rounded-sm"></div>
+<div class="w-6 h-6 bg-primary/40 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-primary rounded-sm"></div>
+<div class="w-6 h-6 bg-primary/80 rounded-sm"></div>
+<div class="w-6 h-6 border-2 border-primary rounded-sm"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-surface-elevated/40 backdrop-blur-[1px]">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg">
+<span class="material-symbols-outlined text-[22px]">toll</span>
+</div>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-text-secondary block mb-1">Endereço da Carteira ETH:</label>
+<div class="flex items-center gap-1.5 bg-surface-container rounded-lg p-2 border border-border-subtle">
+<span class="font-mono text-[10px] text-text-primary truncate flex-1">0xbEccfd3AEb196D11a3c91c5D5aEC42cbf4d4B908</span>
+<button class="p-1.5 rounded bg-surface-container-high text-primary hover:text-text-primary active:scale-95" onclick="navigator.clipboard.writeText('0xbEccfd3AEb196D11a3c91c5D5aEC42cbf4d4B908'); alert('Endereço ETH copiado!');" title="Copiar Endereço">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive FAQ Section -->
+<section class="space-y-3 pt-2">
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">Perguntas frequentes</h3>
+<p class="font-body-sm text-[12px] text-text-secondary">Tirem suas dúvidas?</p>
+</div>
+<div class="space-y-2">
+<details class="group rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md overflow-hidden">
+<summary class="flex justify-between items-center p-3.5 cursor-pointer font-label-md text-label-md text-text-primary list-none">
+<span>Sobre os planos de serviço?</span>
+<span class="material-symbols-outlined text-[18px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-3.5 pb-3.5 text-text-secondary text-[12px] font-body-sm border-t border-border-subtle pt-2 space-y-1">
+<p><strong>1º Plano Light:</strong> ideal para sites institucionais;</p>
+<p><strong>2º Mais Popular:</strong> perfeito para site institucional ou landing capturar leads;</p>
+<p><strong>3º Plano Empresarial:</strong> desenvolvimento FullStack completo com banco de dados.</p>
+</div>
+</details>
+<details class="group rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md overflow-hidden">
+<summary class="flex justify-between items-center p-3.5 cursor-pointer font-label-md text-label-md text-text-primary list-none">
+<span>Como contatar um plano personalizado?</span>
+<span class="material-symbols-outlined text-[18px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-3.5 pb-3.5 text-text-secondary text-[12px] font-body-sm border-t border-border-subtle pt-2 space-y-1">
+<p>Acesse a seção de contato ou envie mensagem via WhatsApp. Explique a complexidade de sua demanda e receba proposta sob medida.</p>
+</div>
+</details>
+<details class="group rounded-xl bg-surface-glass border border-border-glass backdrop-blur-md overflow-hidden">
+<summary class="flex justify-between items-center p-3.5 cursor-pointer font-label-md text-label-md text-text-primary list-none">
+<span>Como pagar? Métodos de pagamento?</span>
+<span class="material-symbols-outlined text-[18px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-3.5 pb-3.5 text-text-secondary text-[12px] font-body-sm border-t border-border-subtle pt-2">
+<p>Aceitamos Pix 24/7 com QR Code ou Chave, Cartão parcelado em até 12x via PicPay/Banco e criptomoedas como Bitcoin e Ethereum.</p>
+</div>
+</details>
+</div>
+</section>
+<!-- Request a Quote Form (Solicitar Orçamento) -->
+<section class="rounded-xl bg-surface-glass border border-border-glass p-5 backdrop-blur-md space-y-4" id="orcamento">
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">Solicitar orçamento</h3>
+<p class="font-body-sm text-[12px] text-text-secondary">Envie suas necessidades técnicas e receba estimativa rápida.</p>
+</div>
+<form class="space-y-3" onsubmit="event.preventDefault(); alert('Orçamento enviado com sucesso!');">
+<div>
+<label class="font-label-sm text-label-sm text-text-secondary block mb-1">Nome completo</label>
+<input class="w-full bg-surface-elevated border border-border-subtle rounded-lg px-3 py-2 text-[13px] text-text-primary placeholder:text-text-muted focus:border-primary focus:ring-0 focus:outline-none transition-all" placeholder="Digite seu nome" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-text-secondary block mb-1">E-mail corporativo</label>
+<input class="w-full bg-surface-elevated border border-border-subtle rounded-lg px-3 py-2 text-[13px] text-text-primary placeholder:text-text-muted focus:border-primary focus:ring-0 focus:outline-none transition-all" placeholder="Digite seu email" required="" type="email"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-text-secondary block mb-1">Mensagem ou Descrição do Projeto</label>
+<textarea class="w-full bg-surface-elevated border border-border-subtle rounded-lg px-3 py-2 text-[13px] text-text-primary placeholder:text-text-muted focus:border-primary focus:ring-0 focus:outline-none transition-all" placeholder="Digite sua mensagem" required="" rows="3"></textarea>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold tracking-wide active:scale-95 transition-all shadow-md" type="submit">
+          Enviar
+        </button>
+</form>
+</section>
+<!-- Footer & Developer Info -->
+<footer class="pt-6 pb-6 border-t border-border-subtle space-y-4 text-center" id="contato">
+<div class="flex flex-col items-center space-y-2">
+<img alt="Profile photo of Alexsandro Arantes with security verified badge" class="w-12 h-12 rounded-full border border-secondary shadow-md object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UBanq6EtPcj6phKRM8jnuH23Oi5FNaWefEwwQ5DXKVsZKHoihxcvwkWNJ1TCy4V-En2vimr4pJM399p2lK7uruj3o493UYsFTNMLiIE3YykgZ6LehTX5T5BJYn1Wr176p8ChAQlMOcbfGunG_VTR3c6P_MD58p-04hZuVJmxPCW4yKO74k7bMcB0fkVsY_jFWFrnVbs2WoIIXnyOAA7cRuio_loBuV3YlI-pyMlzC95tde-1jIXPR2Jg"/>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary">Alexsandro Antonio Arantes</h4>
+<p class="font-label-sm text-label-sm text-secondary">Developer &amp; CyberSecurity</p>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-4 text-text-secondary text-[12px] font-body-sm">
+<span>alexsarantes2023@gmail.com</span>
+<span>•</span>
+<span>13 98223-7027</span>
+<span>•</span>
+<span>Santos - SP</span>
+</div>
+<div class="flex justify-center gap-3 text-text-secondary">
+<a class="w-8 h-8 rounded-full bg-surface-elevated flex items-center justify-center border border-border-subtle hover:text-whatsapp-green transition-all" href="https://wa.link/qu0ysc"><span class="material-symbols-outlined text-[16px]">chat</span></a>
+<a class="w-8 h-8 rounded-full bg-surface-elevated flex items-center justify-center border border-border-subtle hover:text-text-primary transition-all" href="https://github.com/Alexsarantes2023"><span class="material-symbols-outlined text-[16px]">code</span></a>
+<a class="w-8 h-8 rounded-full bg-surface-elevated flex items-center justify-center border border-border-subtle hover:text-primary transition-all" href="https://br.linkedin.com/in/alexsandro-antonio-arantes"><span class="material-symbols-outlined text-[16px]">link</span></a>
+<a class="w-8 h-8 rounded-full bg-surface-elevated flex items-center justify-center border border-border-subtle hover:text-secondary transition-all" href="mailto:alexsarantes2023@gmail.com"><span class="material-symbols-outlined text-[16px]">mail</span></a>
+</div>
+<p class="text-[11px] text-text-muted font-body-sm">
+        © 2025 Alexsandro A. Arantes. Todos os direitos reservados.
+      </p>
+</footer>
+</main>
+<!-- WhatsApp Floating Action Button (FAB) -->
+<a class="fixed right-4 bottom-20 z-40 w-14 h-14 rounded-full bg-whatsapp-green text-surface-bg flex items-center justify-center cyber-glow-green active:scale-95 transition-all shadow-xl" href="https://wa.me/13982237027?text=Ol%C3%A1%20Alexsandro,%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank" title="Falar no WhatsApp">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<!-- BottomNavBar Component (from Shared Components JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-2 pb-safe bg-surface-glass border-t border-border-glass backdrop-blur-md shadow-lg dark:shadow-none">
+<!-- Item 1: Home (Active destination) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary font-label-sm text-label-sm active:scale-95 transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span>Home</span>
+</a>
+<!-- Item 2: Serviços -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-secondary font-label-sm text-label-sm hover:text-primary dark:hover:text-primary active:scale-95 transition-all duration-150" href="#servicos">
+<span class="material-symbols-outlined text-[22px]" data-icon="terminal">terminal</span>
+<span>Serviços</span>
+</a>
+<!-- Item 3: Planos -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-secondary font-label-sm text-label-sm hover:text-primary dark:hover:text-primary active:scale-95 transition-all duration-150" href="#planos">
+<span class="material-symbols-outlined text-[22px]" data-icon="shield">shield</span>
+<span>Planos</span>
+</a>
+<!-- Item 4: Pagamento -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-secondary font-label-sm text-label-sm hover:text-primary dark:hover:text-primary active:scale-95 transition-all duration-150" href="#pagamento">
+<span class="material-symbols-outlined text-[22px]" data-icon="qr_code_2">qr_code_2</span>
+<span>Pagamento</span>
+</a>
+<!-- Item 5: Contato -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-text-secondary font-label-sm text-label-sm hover:text-primary dark:hover:text-primary active:scale-95 transition-all duration-150" href="#contato">
+<span class="material-symbols-outlined text-[22px]" data-icon="alternate_email">alternate_email</span>
+<span>Contato</span>
+</a>
+</nav>
+<!-- Interactive Logic for Payment Switcher -->
+<script>
+    function switchPayment(type) {
+      const tabs = ['pix', 'btc', 'eth'];
+      tabs.forEach(t => {
+        const tabEl = document.getElementById('tab-' + t);
+        const panelEl = document.getElementById('panel-' + t);
+        if (t === type) {
+          tabEl.className = 'py-1.5 rounded-lg text-center font-label-md text-label-md bg-secondary text-on-secondary font-bold transition-all';
+          panelEl.classList.remove('hidden');
+        } else {
+          tabEl.className = 'py-1.5 rounded-lg text-center font-label-md text-label-md text-text-secondary hover:text-text-primary transition-all';
+          panelEl.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body></html>
